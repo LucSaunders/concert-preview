@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { Link } from "react-router-dom";
 import { fetchEvents } from "../actions";
+import { fetchVideos } from "../actions";
 
 class EventListShow extends Component {
   componentDidMount() {
@@ -10,11 +11,11 @@ class EventListShow extends Component {
   }
 
   renderEvents() {
-    console.log(this.props.events)
     const eventsArray = this.props.events;
     return eventsArray.map(event => {
       return (
-        <li style={{marginBottom: 10}} className="event-list-item" key={event.id}>          
+        <li style={{marginBottom: 10}} className="event-list-item" key={event.id}
+           onClick={() => this.props.fetchVideos(this.props.events.performers ? this.props.events.performers.performer[0].name : event.title)}>          
           <div>{event.title} - {event.city_name}, {event.region_name}</div>          
           <div>{event.venue_name} - {event.start_time}</div>
         </li>
@@ -43,7 +44,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchEvents }, dispatch);
+  return bindActionCreators({ fetchEvents, fetchVideos }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventListShow);

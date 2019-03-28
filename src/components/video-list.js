@@ -25,7 +25,7 @@ class VideoListShow extends Component {
 
   render() {
     if(!this.props.videos.length) {
-      return <div>Loading...</div>
+      return <div>No Related Videos For This Event</div>
     }
 
     return (
