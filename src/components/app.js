@@ -14,7 +14,7 @@ export default class App extends Component {
       <div>
         {/* <SearchBar /> */}
         <EventListShow />
-        {/* <VideoListShow />         */}
+        <VideoListShow />        
       </div>
     );
   }
