@@ -15,8 +15,8 @@ class EventListShow extends Component {
     return eventsArray.map(event => {
       return (
         <li style={{marginBottom: 10}} className="event-list-item" key={event.id}
-           onClick={() => this.props.fetchVideos(this.props.events.performers ? this.props.events.performers.performer[0].name : event.title)}>          
-          <div>{event.title} - {event.city_name}, {event.region_name}</div>          
+           onClick={() => this.props.fetchVideos(this.props.events.performers ? this.props.events.performers.performer[0].name : event.title)}>
+          <div>{event.title} - {event.city_name}, {event.region_name}</div>
           <div>{event.venue_name} - {event.start_time}</div>
         </li>
       );
@@ -48,4 +48,3 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventListShow);
-

@@ -5,16 +5,16 @@ import EventListShow from "./event-list";
 import VideoListShow from "./video-list";
 import SearchBar from './searchbar';
 
-/* Render the event-list and video-list components 
+/* Render the event-list and video-list components
    Do the page layout in this component */
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        {/* <SearchBar /> */}
+        <SearchBar /> 
         <EventListShow />
-        <VideoListShow />        
+        <VideoListShow />
       </div>
     );
   }
