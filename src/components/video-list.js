@@ -14,10 +14,13 @@ class VideoListShow extends Component {
   renderVideos() {
     const videosArray = this.props.videos;
     return videosArray.map(video => {
+      const url = `https://www.youtube.com/embed/${video.id.videoId}`;
       return (
         <li style={{marginBottom: 10}} className="video-list-item" key={video.id.videoId}>          
-          <img src={video.snippet.thumbnails.default.url} />
-          <p>{video.snippet.title} ? {video.snippet.title} : ''</p>
+          <div >
+            <iframe className="embed-responsive-item" width={360} height={240} src={url} allowFullScreen={true}/>
+          </div>
+          <div>{video.snippet.title}</div>
         </li>
       );
     });
