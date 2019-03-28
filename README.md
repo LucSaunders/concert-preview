@@ -1,3 +1,51 @@
+Project Shift Hackathon March 28-29, 2019
+
+Concert Concierge
+
+General Gist: An app that provides users with a list of upcoming concerts specific to a city or metro area and provides a scrollable sidebar of videos of the artists in the list.
+
+Specs:
+UI
+
+    **********SEARCH**********
+    *****************************
+    Search Bar: Take in city name (metro area) and a specific date .
+
+
+    **********RETURN**********
+    *****************************
+    Upcoming Concert List: List upcoming concerts. Each list will specify artist, venue, date.
+    	API: Upcoming concerts APIs: Eventful; PredictHQ; Songkick; Spotify
+    		API keys acquired: Eventful; PredictHQ;
+    		API keys pending: Songkick
+
+    Video List & Viewer: List playable YouTube clips of artists featured in Upcoming Concert List.
+    	API: Video Viewer: YouTube
+    		API keys: Keys from Backbone-YouTube eval and later YouTube assignments.
+
+APIs:
+Eventful
+Main API page: http://api.eventful.com/
+API doc: http://api.eventful.com/docs
+Description: Prompt and free to register an account and acquire keys and access to API
+
+    PredictHQ:  https://developer.predicthq.com/
+    Endpoint: https://api.predicthq.com
+    Description: 30-day free trial of API; 14-day free trial of web app;
+    		test-drive PredictHQ API Postman Collection
+
+Extension 1: Allow for a specific date range to be entered into the search field, and return events that match the location and date range.
+
+Extension 2: Make artist names in Concert List clickable links to the artist homepage
+
+Extension 3A: Limit video returns to live clips
+
+Extension 3B: Infinite scroll for videos
+
+Super Ninja Extension: A “Concerts You Missed” feature, that returns past concerts (back to two weeks prior to current date) and live videos
+
+=================================================================================
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
