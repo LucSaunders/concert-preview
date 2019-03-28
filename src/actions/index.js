@@ -7,7 +7,7 @@ export const FETCH_VIDEOS = "fetch_videos";
 
 const EVENT_ROOT_URL = "https://cors-anywhere.herokuapp.com/https://api.eventful.com/json/events/search?";
 const EVENT_API_KEY = "&app_key=Ht6BZQzTjbkk8Gxk";
-const VIDEO_ROOT_URL = "https://www.googleapis.com/youtube/v3/search";
+const VIDEO_ROOT_URL = "https://www.googleapis.com/youtube/v3/search?";
 const VIDEO_API_KEY = "&key=AIzaSyAaExaRBOtyvu4QxGvJ8mMAwrnEVz_6KsQ";
 
 export async function fetchEvents(query) {
@@ -21,8 +21,8 @@ export async function fetchEvents(query) {
   };
 }
 
-export function fetchVideos() {
-  const request = axios.get(`${VIDEO_ROOT_URL}&part=snippet&q=music&type=video${VIDEO_API_KEY}`);
+export function fetchVideos(query) {
+  const request = axios.get(`${VIDEO_ROOT_URL}&part=snippet&q=${query}&type=video${VIDEO_API_KEY}`);
 
   return {
     type: FETCH_VIDEOS,
