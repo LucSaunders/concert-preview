@@ -13,7 +13,7 @@ const VIDEO_API_KEY = "&key=AIzaSyAaExaRBOtyvu4QxGvJ8mMAwrnEVz_6KsQ";
 export async function fetchEvents(query) {
   const request = await fetch(`${EVENT_ROOT_URL}&q=music&location=${query}&t=This+Weekend${EVENT_API_KEY}`);
   const data = await request.json();
-  console.log('Data is' + data.events.event)
+  console.log(data.events.event)
 
   return {
     type: FETCH_EVENTS,
