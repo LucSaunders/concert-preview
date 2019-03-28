@@ -9,7 +9,8 @@ class EventListShow extends Component {
     this.props.fetchEvents('Raleigh');
   }
 
-  renderEvents() {    
+  renderEvents() {
+    console.log(this.props.events)
     const eventsArray = this.props.events;
     return eventsArray.map(event => {
       return (
