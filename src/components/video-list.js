@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { Link } from "react-router-dom";
 import { fetchVideos } from "../actions";
 
-// This component renders each video and puts that video into the video list
+// This component renders each embedded video and puts that video into the video list
 
 class VideoListShow extends Component {
-  componentDidMount() {
-    this.props.fetchVideos('Marshmello');
-  }
-
+  
   renderVideos() {
     const videosArray = this.props.videos;
     return videosArray.map(video => {
@@ -28,7 +24,7 @@ class VideoListShow extends Component {
 
   render() {
     if(!this.props.videos.length) {
-      return <div>No Related Videos For This Event</div>
+      return <div>Loading...</div>
     }
 
     return (
