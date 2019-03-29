@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { Link } from "react-router-dom";
 import { fetchEvents } from "../actions";
 import { fetchVideos } from "../actions";
 
@@ -19,23 +18,21 @@ class EventListShow extends Component {
            paddingTop: 15,
            paddingBottom: 10,
            marginBottom: 10,
-           cursor: 'pointer',
            color: 'black'
-           // marginRight: '1rem'
          }}
          className="event-list-item"
          key={event.id}
-         onClick={() =>
-           this.props.fetchVideos(
-             this.props.events.performers
-               ? this.props.events.performers.performer[0].name
-               : event.title
-           )
-         }
        >
          <div>
-           <h5>
-             <strong>{event.title}</strong> - {event.venue_name}
+           <h5 style={{cursor: 'pointer'}} onClick={() =>
+              this.props.fetchVideos(
+                this.props.events.performers
+                  ? this.props.events.performers.performer[0].name
+                  : event.title
+                )
+              }
+            >
+            <strong>{event.title}</strong> - {event.venue_name}
            </h5>
          </div>
          <div>
@@ -49,12 +46,12 @@ class EventListShow extends Component {
 
   render() {
     if(!this.props.events.length) {
-      return <div>Loading...</div>
+      return <h3 style={{textAlign: 'center', marginTop: 30}}>Loading...</h3>
     }
 
     return (
       <div>
-        <h2>Events This Week</h2>
+        <h2>Live Music Events This Week</h2>
         <ul className="event-list-group">
           {this.renderEvents()}
         </ul>
