@@ -54,7 +54,7 @@ class EventListShow extends Component {
 
     return (
       <div>
-        <h2>Events</h2>
+        <h2>Events This Week</h2>
         <ul className="event-list-group">
           {this.renderEvents()}
         </ul>
