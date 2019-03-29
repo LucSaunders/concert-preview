@@ -10,14 +10,12 @@ const EVENT_API_KEY = "&app_key=Ht6BZQzTjbkk8Gxk";
 const VIDEO_ROOT_URL = "https://www.googleapis.com/youtube/v3/search?";
 const VIDEO_API_KEY = "&key=AIzaSyAaExaRBOtyvu4QxGvJ8mMAwrnEVz_6KsQ";
 
-export async function fetchEvents(query) {
-  const request = await fetch(`${EVENT_ROOT_URL}&q=music&location=${query}&t=This+Weekend${EVENT_API_KEY}`);
-  const data = await request.json();
-  console.log(data.events.event)
+export function fetchEvents(query = 'Raleigh') {
+  const request = axios.get(`${EVENT_ROOT_URL}&q=music&location=${query}&t=This+Week${EVENT_API_KEY}`);
 
   return {
     type: FETCH_EVENTS,
-    payload: data.events.event
+    payload: request
   };
 }
 
