@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchEvents } from '../actions';
+import 'font-awesome/css/font-awesome.css'
 
 class SearchBar extends Component {
  constructor(props) {
    super(props);
    this.state = {
      term: '',
-   };   
+   };
  }
 
  // handleChange(evt) {
@@ -17,21 +18,29 @@ class SearchBar extends Component {
     (https://medium.com/@tmkelly28/handling-multiple-form-inputs-in-react-c5eb83755d15)
     ******************************************************/
  // this.setState({ [evt.target.name]: evt.target.value });
- 
+
  onInputChange = (term) => {
    this.setState({ term });
  }
 
  onFormSubmit = (e) => {
-   e.preventDefault();   
+   e.preventDefault();
    this.props.fetchEvents(this.state.term);
    this.setState({ term: '' });
  }
 
  render() {
    return (
+     <header>
+     <div className="container">
+     <label>
+         <i class="fas fa-guitar" />{' '}
+       </label>
+       <a href="/" className="navbar-brand">
+         <i className="fas fa-guitar"></i>
+       </a>
+       </div>
      <form onSubmit={this.onFormSubmit} className="input-group">
-       <label>City</label>
        <input
          placeholder="Find music events by location"
          className="form-control"
@@ -44,6 +53,7 @@ class SearchBar extends Component {
          </button>
        </span>
      </form>
+     </header>
    );
  }
 }
