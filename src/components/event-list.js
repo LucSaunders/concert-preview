@@ -4,6 +4,10 @@ import { bindActionCreators } from "redux";
 import { fetchEvents } from "../actions";
 import { fetchVideos } from "../actions";
 
+/* This component renders each event item and places that item into the event
+   list on the screen.  Clicking on an event title will fetch videos from the
+   YouTube API matching the event performer or title */
+
 class EventListShow extends Component {
   componentDidMount() {
     this.props.fetchEvents('Raleigh');
@@ -47,11 +51,12 @@ class EventListShow extends Component {
   render() {
     if(!this.props.events.length) {
       return <h3 style={{textAlign: 'center', marginTop: 30}}>Loading...</h3>
+    } else if (this.props.events[0] === "NoResults") {
+      return <h3 style={{textAlign: 'center', marginTop: 30}}>No results match your search</h3>
     }
 
     return (
       <div>
-        <h2>Live Music Events This Week</h2>
         <ul className="event-list-group">
           {this.renderEvents()}
         </ul>
