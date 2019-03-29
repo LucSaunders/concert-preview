@@ -15,10 +15,19 @@ export default class App extends Component {
  render() {
    return (
      <div>
-       <SearchBar />
+       <div className="container">
+         <div className="row">
+           <div className="col-md-2"><i className="fas fa-guitar"></i></div>
+           <div className="col-md-8">
+             <SearchBar />
+           </div>
+           <div className="col-md-2"></div>
+         </div>
+       </div>
        <div className="container">
          <div className="row">
            <div className="col-md-8">
+            <h2>Live Music Events This Week</h2>
              <EventListShow />
            </div>
            <div className="col-md-4">
