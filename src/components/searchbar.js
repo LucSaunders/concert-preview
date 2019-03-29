@@ -12,8 +12,8 @@ class SearchBar extends Component {
    };
 
    // this.handleChange = this.handleChange.bind(this);
-   this.onInputChange = this.onInputChange.bind(this);
-   this.onFormSubmit = this.onFormSubmit.bind(this);
+  //  this.onInputChange = this.onInputChange.bind(this);
+  //  this.onFormSubmit = this.onFormSubmit.bind(this);
  }
 
  // handleChange(evt) {
@@ -22,16 +22,13 @@ class SearchBar extends Component {
     (https://medium.com/@tmkelly28/handling-multiple-form-inputs-in-react-c5eb83755d15)
     ******************************************************/
  // this.setState({ [evt.target.name]: evt.target.value });
- onInputChange(term) {
-   this.setState({ term: term });
+ onInputChange = (term) => {
+   this.setState({ term });
  }
 
- onFormSubmit(e) {
-   e.preventDefault();
-   // Fetch the event data
-   console.log(this.state.term);
-   // this.props.fetchEvents(this.state.term);
-   fetchEvents(this.state.term);
+ onFormSubmit = (e) => {
+   e.preventDefault();   
+   this.props.fetchEvents(this.state.term);
    this.setState({ term: '' });
  }
 
