@@ -31,20 +31,22 @@ class SearchBar extends Component {
 
  render() {
    return (
-     <header>
-     <div className="container">
-     <label>
+    <nav className="navbar navbar-light mb-3 py-0 justify-content-center fixed-top">
+     <header className="align-content-center">
+     {/* <div className="container">
+     {/* <label>
          <i class="fas fa-guitar" />{' '}
-       </label>
-       <a href="/" className="navbar-brand">
+       </label> */}
+       {/* <a href="/" className="navbar-brand">
          <i className="fas fa-guitar"></i>
        </a>
-       </div>
+       </div> */} 
      <form onSubmit={this.onFormSubmit} className="input-group">
        <input
          placeholder="Find music events by location"
          className="form-control"
          value={this.state.term}
+         size={50}
          onChange={event => this.onInputChange(event.target.value)}
        />
        <span className="input-group-btn">
@@ -54,6 +56,7 @@ class SearchBar extends Component {
        </span>
      </form>
      </header>
+    </nav>
    );
  }
 }
