@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchEvents } from '../actions';
-import 'font-awesome/css/font-awesome.css'
+
 
 class SearchBar extends Component {
  constructor(props) {
