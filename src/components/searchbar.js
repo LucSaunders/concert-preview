@@ -8,12 +8,7 @@ class SearchBar extends Component {
    super(props);
    this.state = {
      term: '',
-     // dateRange: ''
-   };
-
-   // this.handleChange = this.handleChange.bind(this);
-  //  this.onInputChange = this.onInputChange.bind(this);
-  //  this.onFormSubmit = this.onFormSubmit.bind(this);
+   };   
  }
 
  // handleChange(evt) {
@@ -22,6 +17,7 @@ class SearchBar extends Component {
     (https://medium.com/@tmkelly28/handling-multiple-form-inputs-in-react-c5eb83755d15)
     ******************************************************/
  // this.setState({ [evt.target.name]: evt.target.value });
+ 
  onInputChange = (term) => {
    this.setState({ term });
  }
