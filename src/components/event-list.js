@@ -11,17 +11,41 @@ class EventListShow extends Component {
   }
 
   renderEvents() {
-    const eventsArray = this.props.events;
-    return eventsArray.map(event => {
-      return (
-        <li style={{marginBottom: 10}} className="event-list-item" key={event.id}
-           onClick={() => this.props.fetchVideos(this.props.events.performers ? this.props.events.performers.performer[0].name : event.title)}>          
-          <div>{event.title} - {event.city_name}, {event.region_name}</div>          
-          <div>{event.venue_name} - {event.start_time}</div>
-        </li>
-      );
-    });
-  }
+   const eventsArray = this.props.events;
+   return eventsArray.map(event => {
+     return (
+       <li
+         style={{
+           paddingTop: 15,
+           paddingBottom: 10,
+           marginBottom: 10,
+           cursor: 'pointer',
+           color: 'black'
+           // marginRight: '1rem'
+         }}
+         className="event-list-item"
+         key={event.id}
+         onClick={() =>
+           this.props.fetchVideos(
+             this.props.events.performers
+               ? this.props.events.performers.performer[0].name
+               : event.title
+           )
+         }
+       >
+         <div>
+           <h5>
+             <strong>{event.title}</strong> - {event.venue_name}
+           </h5>
+         </div>
+         <div>
+           {event.city_name}, {event.region_name} - {event.start_time}
+         </div>
+         <hr />
+       </li>
+     );
+   });
+ }
 
   render() {
     if(!this.props.events.length) {
@@ -30,7 +54,7 @@ class EventListShow extends Component {
 
     return (
       <div>
-        <h3>Events</h3>
+        <h2>Events</h2>
         <ul className="event-list-group">
           {this.renderEvents()}
         </ul>
@@ -48,4 +72,3 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventListShow);
-
