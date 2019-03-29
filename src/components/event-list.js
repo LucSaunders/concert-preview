@@ -6,11 +6,25 @@ import { fetchVideos } from "../actions";
 
 /* This component renders each event item and places that item into the event
    list on the screen.  Clicking on an event title will fetch videos from the
-   YouTube API matching the event performer or title */
+   YouTube API matching the event performer or title.  On initial load or search
+   the video list updates based upon the first returned result */
 
 class EventListShow extends Component {
   componentDidMount() {
     this.props.fetchEvents('Raleigh');
+  }
+
+  componentDidUpdate() {
+    this.props.events[0].performers ? 
+    this.props.fetchVideos(
+      Array.isArray(this.props.events[0].performers)
+        ? this.props.events[0].performers.performer[0].name
+        : this.props.events[0].performers.performer.name
+    )
+    :
+    this.props.fetchVideos(
+      this.props.events[0].title
+    )
   }
 
   renderEvents() {
@@ -29,10 +43,15 @@ class EventListShow extends Component {
        >
          <div>
            <h5 style={{cursor: 'pointer'}} onClick={() =>
-              this.props.fetchVideos(
-                this.props.events.performers
-                  ? this.props.events.performers.performer[0].name
-                  : event.title
+              event.performers ?
+                this.props.fetchVideos(
+                  Array.isArray(event.performers.performer)
+                    ? event.performers.performer[0].name
+                    : event.performers.performer.name
+                  )
+              :
+                this.props.fetchVideos(
+                  event.title
                 )
               }
             >
@@ -53,7 +72,7 @@ class EventListShow extends Component {
       return <h3 style={{textAlign: 'center', marginTop: 30}}>Loading...</h3>
     } else if (this.props.events[0] === "NoResults") {
       return <h3 style={{textAlign: 'center', marginTop: 30}}>No results match your search</h3>
-    }
+    }    
 
     return (
       <div>
