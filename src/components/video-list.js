@@ -1,20 +1,29 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { fetchVideos } from "../actions";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchVideos } from '../actions';
 
 // This component renders each embedded video and puts that video into the video list
 
 class VideoListShow extends Component {
-  
   renderVideos() {
     const videosArray = this.props.videos;
     return videosArray.map(video => {
       const url = `https://www.youtube.com/embed/${video.id.videoId}`;
       return (
-        <li style={{marginBottom: 10}} className="video-list-item" key={video.id.videoId}>
-          <div >
-            <iframe className="embed-responsive-item" width={360} height={240} src={url} allowFullScreen={true}/>
+        <li
+          style={{ marginBottom: 10 }}
+          className="video-list-item"
+          key={video.id.videoId}
+        >
+          <div>
+            <iframe
+              className="embed-responsive-item"
+              width={280}
+              height={160}
+              src={url}
+              allowFullScreen={true}
+            />
           </div>
           <div>{video.snippet.title}</div>
         </li>
@@ -23,14 +32,23 @@ class VideoListShow extends Component {
   }
 
   render() {
-    if(!this.props.videos.length) {
-      return <div>Loading...</div>
+    if (!this.props.videos.length) {
+      return <div>Loading...</div>;
     }
 
     return (
       <div>
-        <h2>Videos</h2>
-        <ul className="video-list-group">
+        <div className="vid-head-back-block" id="rcorners-vid-head">
+          <h2 className="video-header">
+            {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWAjV_z5lvi7bBorCSbh0KkByO9E2D0YTI7G4AM49ypwWdpF4DVideos" /> */}
+            Related Videos
+            {/* <hr /> */}
+          </h2>
+        </div>
+        <ul
+          className="video-list-group video-back-block"
+          id="rcorners-vid-list-block"
+        >
           {this.renderVideos()}
         </ul>
       </div>
@@ -46,4 +64,7 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchVideos }, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(VideoListShow);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(VideoListShow);
