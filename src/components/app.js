@@ -22,29 +22,32 @@ class App extends Component {
           </div>
         </div>
         <div className="container">
-          <div className="row align-items-center">
-            {/* <div className="col-md-8 "> */}
-            {/* <span className="evnt-lister"> */}
-            <h2 className="evt-list-head">
-              <img
+          <div className="row justify-content-center">
+            <div className="col-md-8 ">
+              {/* <span className="evnt-lister"> */}
+              <h2 className="text-center">
+                {/* <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWAjV_z5lvi7bBorCSbh0KkByO9E2D0YTI7G4AM49ypwWdpF4D"
                 width="30"
                 height="30"
-              />
-              Live Music Events This Week
-              <img
+              /> */}
+                <strong>
+                  <span className="lightgrey-letters">Live</span>
+                  <span className="pink-letters"> Music Events </span>
+                  <span className="lightgrey-letters">This Week</span>
+                  {/* <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWAjV_z5lvi7bBorCSbh0KkByO9E2D0YTI7G4AM49ypwWdpF4D"
                 width="30"
                 height="30"
-              />
-            </h2>
-            {/* </span> */}
-
-            {/* </span> */}
+              /> */}
+                </strong>
+              </h2>
+            </div>
+            <div className="col-md-4">.</div>
           </div>
           <div className="row">
             <div className="col-md-8 ">
-              <div className="event-back-block" id="rcorners-evt-block">
+              <div className="transparent" id="rcorners-evt-block">
                 <EventListShow />
               </div>
             </div>

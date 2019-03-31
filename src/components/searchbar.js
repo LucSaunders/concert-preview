@@ -69,7 +69,7 @@ class SearchBar extends Component {
         {/* <header className="align-content-center"> */}
         <div className="container">
           <div>
-            <a class="navbar-brand ml-auto" href="#">
+            <a className="navbar-brand ml-auto" href="#">
               <p className="brandNameFirstLetter">
                 F<span id="brandNameFirstWord">irst</span>
                 <span>

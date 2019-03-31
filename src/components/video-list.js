@@ -38,12 +38,12 @@ class VideoListShow extends Component {
 
     return (
       <div>
-        <div className="vid-head-back-block" id="rcorners-vid-head">
-          <h2 className="video-header">
+        <div className="transparent" id="rcorners-vid-head">
+          <h3 className="video-header">
             {/* <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWAjV_z5lvi7bBorCSbh0KkByO9E2D0YTI7G4AM49ypwWdpF4DVideos" /> */}
-            Related Videos
+            <strong> Related Videos </strong>
             {/* <hr /> */}
-          </h2>
+          </h3>
         </div>
         <ul
           className="video-list-group video-back-block"

@@ -39,21 +39,23 @@ class EventListShow extends Component {
           key={event.id}
         >
           <div>
-            <h5
-              style={{ cursor: 'pointer' }}
-              onClick={() =>
-                event.performers
-                  ? this.props.fetchVideos(
-                      Array.isArray(event.performers.performer)
-                        ? event.performers.performer[0].name
-                        : event.performers.performer.name
-                    )
-                  : this.props.fetchVideos(event.title)
-              }
-            >
-              <span className="eventTitle">
-                <strong>{event.title}</strong>
-              </span>{' '}
+            <h5>
+              <span
+                style={{ cursor: 'pointer' }}
+                onClick={() =>
+                  event.performers
+                    ? this.props.fetchVideos(
+                        Array.isArray(event.performers.performer)
+                          ? event.performers.performer[0].name
+                          : event.performers.performer.name
+                      )
+                    : this.props.fetchVideos(event.title)
+                }
+              >
+                <span className="eventTitle">
+                  <strong>{event.title}</strong>
+                </span>{' '}
+              </span>
               - {event.venue_name}
             </h5>
           </div>
