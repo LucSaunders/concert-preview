@@ -9,7 +9,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  /* 'Helvetica Neue', sans-serif; */
 }
 
 ul {
@@ -42,7 +43,7 @@ input {
 }
 
 .navbar {
-  height: 85px;
+  height: 95px;
   background-color: black;
   width: 100%;
   padding: 15px;
@@ -53,12 +54,16 @@ input {
 }
 
 .brandNameFirstLetter {
-  color: #f13279;
+  color: #ad2375;
+  /* rgb(140, 201, 90); */
+  /* color: #f13279; */
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 40pt;
+  font-size: 39pt;
 }
 #brandNameFirstWord {
-  color: #f13279;
+  color: #ad2375;
+  /* rgb(140, 201, 90); */
+  /* color: #f13279; */
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 36pt;
 }
@@ -66,7 +71,7 @@ input {
 .brandNameFirstLetterSecondWord {
   color: lightgrey;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 40pt;
+  font-size: 38pt;
 }
 #brandNameSecondWord {
   color: lightgrey;
@@ -74,11 +79,15 @@ input {
 }
 
 .fa-home {
-  color: #f13279;
+  color: rgb(181, 37, 122);
+  /* rgb(140, 201, 90); */
+  /* color: #f13279; */
 }
 
 .fa-question {
-  color: #f13279;
+  color: rgb(181, 37, 122);
+  /* rgb(140, 201, 90); */
+  /* color: #f13279; */
 }
 
 form {
@@ -87,25 +96,32 @@ form {
 }
 
 .nav-item {
-  color: #f13279;
-  font-size: 20px;
+  color: rgb(181, 37, 122);
+  /* rgb(140, 201, 90); */
+  /* #f13279; */
+  font-size: 28px;
   padding-left: 1em;
 }
 
 .pink-letters {
-  color: #f13279;
+  color: rgb(181, 37, 122);
+  /* rgb(140, 201, 90); */
+  /* color: #f13279; */
 }
 
 .lightgrey-letters {
   color: lightgrey;
 }
 .eventTitle {
-  color: #f13279;
+  color: #ad2375;
+  /* rgb(140, 201, 90); */
+  /* color: #f13279; */
 }
 
 /* .event-back-block { */
 .transparent {
-  background-color: rgba(211, 211, 211, 0.6) !important ;
+  background-color: rgb(255, 255, 255, 0.5) !important;
+  /* rgba(211, 211, 211, 0.6) !important ; */
   /* } */
   /* background-color: lightgrey; */
 }
@@ -126,7 +142,9 @@ form {
 
 .video-back-block {
   /* background-color: f13279#; */
-  background-color: rgba(241, 50, 121, 0.7) !important;
+  background-color: rgb(181, 37, 122, 0.7) !important;
+  /* rgb(140, 201, 90, 0.7) !important; */
+  /* rgba(241, 50, 121, 0.7) !important; */
   padding-right: 1em;
   padding-top: 3rem;
   margin-top: 0;
@@ -134,14 +152,16 @@ form {
 
 #rcorners-evt-block {
   border-radius: 25px;
-  background: lightgrey;
+  background: rgb(255, 255, 255);
+  /* lightgrey; */
   border-color: black;
   border: 10px;
 }
 
 #rcorners-vid-head {
   border-radius: 25px 25px 0px 0px;
-  background: lightgrey;
+  background: rgb(255, 255, 255);
+  /* lightgrey; */
 }
 
 #rcorners-vid-list-block {
