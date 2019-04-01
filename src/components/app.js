@@ -27,19 +27,19 @@ class App extends Component {
               {/* <span className="evnt-lister"> */}
               <h2 className="text-center">
                 {/* <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWAjV_z5lvi7bBorCSbh0KkByO9E2D0YTI7G4AM49ypwWdpF4D"
-                width="30"
-                height="30"
-              /> */}
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0E61uf4R8U4ZQdJa0ocOzE49KMQ1NDCUaVPEad4Lh88XN5cHu"
+                  width="30"
+                  height="30"
+                /> */}
                 <strong>
                   <span className="lightgrey-letters">Live</span>
                   <span className="pink-letters"> Music Events </span>
                   <span className="lightgrey-letters">This Week</span>
                   {/* <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWAjV_z5lvi7bBorCSbh0KkByO9E2D0YTI7G4AM49ypwWdpF4D"
-                width="30"
-                height="30"
-              /> */}
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0E61uf4R8U4ZQdJa0ocOzE49KMQ1NDCUaVPEad4Lh88XN5cHu"
+                    width="30"
+                    height="30"
+                  /> */}
                 </strong>
               </h2>
             </div>

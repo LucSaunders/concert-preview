@@ -54,16 +54,16 @@ input {
 }
 
 .brandNameFirstLetter {
-  color: #ad2375;
+  /* color: #ad2375; */
   /* rgb(140, 201, 90); */
-  /* color: #f13279; */
+  color: #f13279;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 39pt;
 }
 #brandNameFirstWord {
-  color: #ad2375;
+  /* color: #ad2375; */
   /* rgb(140, 201, 90); */
-  /* color: #f13279; */
+  color: #f13279;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 36pt;
 }
@@ -79,15 +79,15 @@ input {
 }
 
 .fa-home {
-  color: rgb(181, 37, 122);
+  /* color: rgb(181, 37, 122); */
   /* rgb(140, 201, 90); */
-  /* color: #f13279; */
+  color: #f13279;
 }
 
 .fa-question {
-  color: rgb(181, 37, 122);
+  /* color: rgb(181, 37, 122); */
   /* rgb(140, 201, 90); */
-  /* color: #f13279; */
+  color: #f13279;
 }
 
 form {
@@ -96,17 +96,17 @@ form {
 }
 
 .nav-item {
-  color: rgb(181, 37, 122);
+  /* color: rgb(181, 37, 122); */
   /* rgb(140, 201, 90); */
-  /* #f13279; */
+  color: #f13279;
   font-size: 28px;
   padding-left: 1em;
 }
 
 .pink-letters {
-  color: rgb(181, 37, 122);
+  /* color: rgb(181, 37, 122); */
   /* rgb(140, 201, 90); */
-  /* color: #f13279; */
+  color: #f13279;
 }
 
 .lightgrey-letters {
@@ -142,9 +142,9 @@ form {
 
 .video-back-block {
   /* background-color: f13279#; */
-  background-color: rgb(181, 37, 122, 0.7) !important;
+  /* background-color: rgb(181, 37, 122, 0.7) !important; */
   /* rgb(140, 201, 90, 0.7) !important; */
-  /* rgba(241, 50, 121, 0.7) !important; */
+  background-color: rgba(241, 50, 121, 0.7) !important;
   padding-right: 1em;
   padding-top: 3rem;
   margin-top: 0;
