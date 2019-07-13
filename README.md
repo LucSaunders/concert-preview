@@ -9,7 +9,7 @@ UI
 
     **********SEARCH**********
     *****************************
-    Search Bar: Take in city name (metro area) and a specific date .
+    Search Bar: Take in city name (metro area) and a specific date range.
 
 
     **********RETURN**********

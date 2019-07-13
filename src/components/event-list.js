@@ -5,13 +5,12 @@ import { fetchEvents } from '../actions';
 import { fetchVideos } from '../actions';
 
 /* This component renders each event item and places that item into the event
-   list on the screen.  Clicking on an event title will fetch videos from the
-   YouTube API matching the event performer or title.  On initial load or search
-   the video list updates based upon the first returned result */
+   list on the screen. Clicking on an event title will fetch videos from the
+   YouTube API matching the event performer or title. On initial load or search the video list updates based upon the first returned result */
 
 class EventListShow extends Component {
   componentDidMount() {
-    this.props.fetchEvents('Raleigh');
+    this.props.fetchEvents('Pittsburgh');
   }
 
   componentDidUpdate() {

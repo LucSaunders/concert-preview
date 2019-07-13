@@ -9,7 +9,7 @@ const EVENT_ROOT_URL =
   'https://cors-anywhere.herokuapp.com/https://api.eventful.com/json/events/search?';
 const EVENT_API_KEY = '&app_key=Ht6BZQzTjbkk8Gxk';
 const VIDEO_ROOT_URL = 'https://www.googleapis.com/youtube/v3/search?';
-const VIDEO_API_KEY = '&key=AIzaSyBhEipxN2X8twvxFy7Uck1ehRxzzyjZQXY';
+const VIDEO_API_KEY = '&key=AIzaSyC1DH9BN1VRBoNennrDZXAVqLGr_1xz7_8';
 
 export function fetchEvents(query = 'Raleigh') {
   const request = axios.get(

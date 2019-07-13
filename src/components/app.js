@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 /* Render the event-list and video-list components
-  Do the page layout in this component */
+  (Page layout) */
 
 class App extends Component {
   render() {
@@ -17,7 +17,6 @@ class App extends Component {
       <div>
         <div className="container-fluid">
           <div className="row">
-            {/* <Header branding="Contact Manager" /> */}
             <SearchBar />
           </div>
         </div>
@@ -54,7 +53,6 @@ class App extends Component {
             <div className="col-md-4">
               <VideoListShow padding-right="4 rem" />
             </div>
-            {/* <div className="col-sm-1">.</div> */}
           </div>
         </div>
       </div>
