@@ -26,47 +26,14 @@ class SearchBar extends Component {
 
   onFormSubmit = e => {
     e.preventDefault();
-    this.props.fetchEvents(this.state.term);
+    // this.props
+    fetchEvents(this.state.term);
     this.setState({ term: '' });
   };
 
   render() {
     return (
-      //   <nav className="navbar navbar-light mb-3 py-0 justify-content-center fixed-top">
-      //     <header className="align-content-center">
-      //       {/* <div className="container">
-      //  {/* <label>
-      //      <i class="fas fa-guitar" />{' '}
-      //    </label> */}
-      //       {/* <a href="/" className="navbar-brand">
-      //      <i className="fas fa-guitar"></i>
-      //    </a>
-      //    </div> */}
-      //       <div className="row">
-      //         <div className="col-md-6" id="branding">
-      //           First Listen
-      //         </div>
-      //         <div className="col-md-6">
-      //           <form onSubmit={this.onFormSubmit} className="input-group">
-      //             <input
-      //               placeholder="Find music events by location"
-      //               className="form-control"
-      //               value={this.state.term}
-      //               size={30}
-      //               onChange={event => this.onInputChange(event.target.value)}
-      //             />
-      //             <span className="input-group-btn">
-      //               <button type="submit" className="btn btn-outline-light">
-      //                 Go
-      //               </button>
-      //             </span>
-      //           </form>
-      //         </div>
-      //       </div>
-      //     </header>
-      //   </nav>
       <nav className="navbar navbar-expand-sm navbar-light mb-3 py-0 justify-content-center fixed-top">
-        {/* <header className="align-content-center"> */}
         <div className="container">
           <div>
             <a className="navbar-brand ml-auto" href="#">
@@ -85,36 +52,6 @@ class SearchBar extends Component {
               </p>
             </a>
           </div>
-          {/* <div>
-            <a>
-              <img
-                src="https://cdn5.vectorstock.com/i/thumbs/33/04/sound-wave-icon-white-vector-15943304.jpg"
-                // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkWAMnAKdJVdrT4u7yQ6VeMlmV17sSCndhglu1aiWHBXsQ7riJAw"
-                // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-4XFNWQOEJVKvDaX3iqAkj3pKNhUUZMUVIYHN2r8yPDFmbkPf"
-                // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS4Nvnenk6DkQfEbG7f7PCrIafeeaC8q-gKFHtn81QGbGAO9IV"
-                width="60"
-                height="60"
-                alt=""
-              />
-            </a>
-          </div> */}
-          {/* <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <a href="#" className="navbar-brand">
-                <img
-                  src="https://c7.uihere.com/files/740/847/704/orange-thumb-finger-hand-font-garageband-thumb.jpg"
-                  //  className="fas fa-guitar"
-                />
-                
-              </a>
-            </li>
-          </ul> */}
-          {/* <a href="#" className="navbar-brand">
-            <i className="fas fa-guitar" />
-            First Listen
-          </a>
-          <i className="fas fa-guitar" /> */}
-          {/* <div className="navbar-nav mx-auto"> */}
           <form onSubmit={this.onFormSubmit} className="input-group">
             <input
               placeholder="Find music events by location"
@@ -129,7 +66,6 @@ class SearchBar extends Component {
               </button>
             </span>
           </form>
-          {/* </div> */}
           <div>
             <ul className="navbar-nav">
               <li className="nav-item mr-auto">
@@ -146,7 +82,6 @@ class SearchBar extends Component {
             </ul>
           </div>
         </div>
-        {/* </header> */}
       </nav>
     );
   }
